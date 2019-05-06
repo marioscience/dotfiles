@@ -1,0 +1,150 @@
+First, I'd remove ndiswrapper:
+
+sudo apt-get purge ndiswrapper*
+Next, with a temporary working internet connection, do:
+
+wget https://github.com/lwfinger/rtlwifi_new/archive/extended.zip
+unzip extended.zip
+cd rtlwifi_new-extended
+make
+sudo make install
+sudo modprobe rtl8822be
+If, after the 'make' step, you have errors, please post them here. Warnings are probably alright.
+
+EDIT: You have compiled the driver for your current running kernel only. When Update Manager installs a later one, also known as linux-image, after the requested reboot, re-compile:
+
+cd ~/rtlwifi_new-extended
+make clean
+make
+sudo make install
+sudo modprobe rtl8822be
+
+
+
+============
+
+
+
+17
+down vote
+By default sudo is not installed on Debian, but you can install it. First enable su-mode:
+su -
+
+Install sudo by running:
+apt-get install sudo -y
+
+After that you would need to play around with users and permissions. Give sudo right to your own user.
+
+usermod -aG sudo yourusername
+
+Make sure your sudoers file have sudo group added. Run:
+visudo to modify sudoers file and add following line into it (if it is missing):
+
+# Allow members of group sudo to execute any command
+%sudo   ALL=(ALL:ALL) ALL
+You need to relogin or reboot device completely for changes to take effect.
+
+========
+Debugging NetworkManager:
+https://wiki.ubuntu.com/DebuggingNetworkManager
+
+Contents of URL above pasted below for offline view:
+
+DebuggingNetworkManager
+Available languages: Italiano,
+
+Debugging Central
+
+This page is part of the debugging series — pages with debugging details for a variety of Ubuntu packages.
+
+Contents
+
+Bug Summary
+Understanding your bug and getting more information
+Getting debug logs
+Getting NetworkManager debug logs
+Getting ModemManager debug logs
+Getting wpasupplicant debug logs
+Getting a capture of syslog
+Handling 3G / modem issues
+A Testcase
+Bug Summary
+If a network-manager bug report is about not being able to connect the title or summary should be in the format:
+
+"[CHIPSET] cannot connect to (ENCRYPT_METHOD)"
+
+where the CHIPSET is the wireless driver used and ENCRYPT_METHOD is the encryption method used by your wireless network.
+
+Understanding your bug and getting more information
+There is a lot of debugging information available on the GNOME Live wiki: NetworkManager/Debugging.
+
+You can also take a look at Darren Albers' FAQ.
+
+There is additional information on DebuggingNetworkManager/ReasonCodes for disconnection and network changes available.
+
+The similar reason/status code data for wpasupplicant is available here: ieee802_11_defs.h
+
+Getting debug logs
+You can then follow developers' intructions on a bug report for the exact command line to use; or run it directly as such:
+
+Getting NetworkManager debug logs
+
+sudo /usr/lib/NetworkManager/debug-helper.py --nm debug
+Then get the logs which will be written to /var/log/syslog. To disable it, pass info instead of debug in the above command, or reboot.
+
+Getting ModemManager debug logs
+
+sudo /usr/lib/NetworkManager/debug-helper.py --mm debug
+Then get the logs which will be written to /var/log/syslog. To disable it, pass info instead of debug in the above command, or reboot.
+
+See also DebuggingModemmanager.
+
+Getting wpasupplicant debug logs
+
+sudo /usr/lib/NetworkManager/debug-helper.py --wpa msgdump
+Then get the logs which will be written to /var/log/syslog. To disable it, pass info instead of debug in the above command, or reboot.
+
+Getting a capture of syslog
+Mixing and mashing the above is perfectly acceptable as well if you want to see how NetworkManager and other parts of the stack interact together.
+
+In order to understand whats going on and track down issues, its good to have a full log. To do so, capture the complete test case and submit the whole file (don't cut out what you think is important). Please add markers in the log file so the bug triager can easily see what actions the user takes at what point of time (this isn't essential, but helps a lot).
+
+To capture the syslog, do:
+
+ tail -n0 -f /var/log/syslog > /tmp/syslog
+and to stop capturing do Ctrl-C (you will have to type your other commands in an other window or tab)
+
+Adding markers is just like adding new lines with an editor that show the triager what happened at what point of time. You can also do this on the fly as you test with the command logger "[ clicked on wireless network 'ubuntu']" .
+
+Example marker:
+
+Sep  6 08:12:30 ...
+
+[ clicked on wireless network 'ubuntu']
+
+Sep  6 08:12:31 ...
+...
+Handling 3G / modem issues
+An few extra things that are very helpful to add in case of issues with 3G:
+
+The output of udevadm for tty devices, and output of lsusb:
+
+
+$ udevadm info --query=all --path=/sys/class/tty/... --attribute-walk
+
+$ lsusb
+A Testcase
+A good testcase is a step by step instruction to reproduce your bug starting with driver unloaded and NetworkManager stopped.
+
+First, stop NetworkManager:
+
+sudo service network-manager stop
+Then unload your driver:
+
+sudo modprobe -r DRIVER
+Next, load the driver:
+
+sudo modprobe DRIVER
+and finally start NetworkManager:
+
+sudo service network-manager start

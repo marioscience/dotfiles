@@ -1,0 +1,4 @@
+In here there's a section to disable steam runtime and run steam with local drivers.
+It might run games with better perf
+
+https://wiki.debian.org/Steam#Graphics

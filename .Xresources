@@ -1,0 +1,11 @@
+XTerm*renderFont: true
+XTerm*faceName: Monaco
+XTerm*faceSize: 9
+
+UXTerm*renderFont: true
+
+UXTerm*faceName: Monaco
+UXTerm*faceSize: 9
+
+xterm*background: #262626
+xterm*foreground: #DFDFDF

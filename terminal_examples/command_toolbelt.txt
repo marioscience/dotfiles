@@ -1,0 +1,42 @@
+=== Quick Reference ===
+cmd_reference - alias to show this help
+cd - - go back to previous directory
+$_ or !$ - last argument used
+!! - aliast for last run command
+sudo !! - run last command as sudo
+!!:1, !!:2, !!:3 - last command arguments by index
+Ctrl+Shift+U [insert Unicode(while holding ctrl+shift)] - Add special characters ie. 00F1 for spanish ñ
+
+## This file is to keep a tab on the applications that I have installed 
+that are helpful for certain functions. 
+
+=== NETWORK MONITORING ===
+tcptrack - tracks tcp connections 
+slurm - monitor network bandwith information 
+nmcli - check network manager devices. use "nmcli device wifi" to see wifi info
+dmesg - check logs for kernel (wifi errors might be logged here, you can also check /var/log/syslog)
+
+=== BLUETOOTH ===
+bluetoothctl - scan, pair, connect, etc to bluetooth devices
+
+=== AUDIO ===
+pactl, pacmd - pulse audio tools to manage audio cards
+
+=== SYSTEM MONITOR ===
+gtop - monitor CPU, memory, network etc
+
+=== DISK ===
+lsblk, fdisk -l, parted -l, blkid - To see information about all disks (including unmounted)
+df -h - See available space
+du - See space information for files/directories 
+du -h --max-depth=1 Downloads/ | sort -hr - See detailed information about space in directory
+
+=== UTILITIES ===
+libreoffice - office for linux
+mupdf - package for opening pdf files
+apt-cache search name - search cache for packages to install. remember to update/upgrade apt-get.
+apt-cache show package_name - show info about package in chache (candidate for install)
+apt-cache showpkg package_name - same as above but meta 
+find /path/to/search -name filename -type -f/d - find a file or directory given a name
+snap run acestreamplayer - run acestream
+sudo openvpn us-free-02.protonvpn.com.udp.ovpn - run openvpn with US free server. if program works good, might pay for it. 

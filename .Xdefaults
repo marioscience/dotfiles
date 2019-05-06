@@ -1,0 +1,86 @@
+URxvt.transparent:      true
+URxvt.shading:          25
+URxvt.cursorBlink:      1
+URxvt.termName:         rxvt-256color
+URxvt.font:		xft:Terminal:pixelsize=11,style=Regular
+URxvt.boldFont:		xft:Terminal:pixelsize=11,style=Bold
+URxvt.italicFont:	xft:Terminal:pixelsize=11,style=bold
+URxvt.boldItalicFont:	xft:Terminal:pixelsize=11,style=bold
+!URxvt.boldItalicFont:	xft:Terminal:pixelsize=11,style=bold
+URxvt.reverseVideo:     True
+URxvt.letterSpace:      -1
+URxvt.perl-ext-common:  default,matcher
+URxvt.urlLauncher:      google-chrome
+URxvt.matcher.button:   3
+URxvt.visualBell:       true
+URxvt.scrollBar:        false
+URxvt.saveLines:        4095
+
+URxvt.foreground: #3a3a3a
+URxvt.background: #bababa
+! --- ~/.Xresources ------------------------------------------------------------
+! ------------------------------------------------------------------------------
+! --- generated with 4bit Terminal Color Scheme Designer -----------------------
+! ------------------------------------------------------------------------------
+! --- http://ciembor.github.com/4bit -------------------------------------------
+! ------------------------------------------------------------------------------
+
+! --- special colors ---
+
+*background: #3a3a3a
+*foreground: #bababa
+
+! --- standard colors ---
+
+! black
+*color0: #000000
+
+! bright_black
+*color8: #3a3a3a
+
+! red
+*color1: #cf6363
+
+! bright_red
+*color9: #e7b1b1
+
+! green
+*color2: #63cf63
+
+! bright_green
+*color10: #b1e7b1
+
+! yellow
+*color3: #cfcf63
+
+! bright_yellow
+*color11: #e7e7b1
+
+! blue
+*color4: #6363cf
+
+! bright_blue
+*color12: #b1b1e7
+
+! magenta
+*color5: #cf63cf
+
+! bright_magenta
+*color13: #e7b1e7
+
+! cyan
+*color6: #63cfcf
+
+! bright_cyan
+*color14: #b1e7e7
+
+! white
+*color7: #bababa
+
+! bright_white
+*color15: #ffffff
+
+
+! ------------------------------------------------------------------------------
+! --- end of terminal colors section -------------------------------------------
+! ------------------------------------------------------------------------------

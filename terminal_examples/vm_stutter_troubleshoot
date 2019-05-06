@@ -1,0 +1,14 @@
+under System>Motherboard BaseMemory increased from 4096 to 6144 MB
+under System>Motherboard Boot Order unchecked Optical
+under system>acceleration Paravirtualization Interface from default to Hyper-V
+under Display>Screen unchecked Enabled 2D video acceleration
+under Storage>Storage Devices removed Controller: IDE Controller VBoxGuestAdditions.iso
+under Storage>Attributes checked Use Host I/O Cache
+
+==== 
+tested problem of audio and performance stutter. seems to be gone. I believe the problem was either IO cache being deactivated or too low memory causing paging occasionally. 
+====
+reverting some changes:
+under Display>Screen checked Enabled 2D video acceleration
+
+

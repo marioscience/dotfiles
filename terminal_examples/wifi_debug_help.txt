@@ -1,0 +1,24 @@
+things to try as found in internet
+
+check logs 
+dmesg | grep wlp
+cat /var/log/syslog | grep wlp
+
+restart service.sh
+#!/bin/bash
+sudo systemctl stop NetworkManager.service
+sudo systemctl start NetworkManager.service &
+disown
+clear
+
+check card connected
+lspci | grep -i net
+
+check module loaded
+lsmod | grep -i 8822
+
+Errors found in syslog:
+CTRL-EVENT-DISCONNECTED reason 4
+connection disconnected (reason -4)
+
+try: sudo pkill -f wpa_supplicant

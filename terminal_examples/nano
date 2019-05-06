@@ -1,0 +1,111 @@
+Module                  Size  Used by
+binfmt_misc            20480  1
+joydev                 24576  0
+snd_hda_codec_hdmi     57344  1
+nvidia_drm             49152  0
+nvidia_modeset       1044480  1 nvidia_drm
+btcoexist             483328  0
+rtl_pci                36864  0
+rtlwifi               180224  2 rtl_pci,btcoexist
+nvidia              16654336  1 nvidia_modeset
+intel_rapl             24576  0
+snd_hda_codec_realtek   110592  1
+x86_pkg_temp_thermal    16384  0
+arc4                   16384  2
+snd_hda_codec_generic    86016  1 snd_hda_codec_realtek
+intel_powerclamp       16384  0
+snd_hda_intel          45056  0
+kvm_intel             237568  0
+snd_hda_codec         151552  4 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec_realtek
+r8822be               958464  0
+kvm                   733184  1 kvm_intel
+snd_hda_core           94208  5 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek
+snd_hwdep              20480  1 snd_hda_codec
+irqbypass              16384  1 kvm
+crct10dif_pclmul       16384  0
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+drm_kms_helper        196608  1 nvidia_drm
+snd_pcm               118784  4 snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+eeepc_wmi              16384  0
+asus_wmi               32768  1 eeepc_wmi
+mac80211              831488  3 rtl_pci,rtlwifi,r8822be
+intel_cstate           16384  0
+wmi_bmof               16384  0
+snd_timer              36864  1 snd_pcm
+sparse_keymap          16384  1 asus_wmi
+drm                   475136  3 drm_kms_helper,nvidia_drm
+intel_uncore          135168  0
+mxm_wmi                16384  0
+ipmi_devintf           20480  0
+iTCO_wdt               16384  0
+snd                    98304  8 snd_hda_codec_generic,snd_hda_codec_hdmi,snd_hwdep,snd_hda_intel,snd_hda_codec,snd_hda_codec_realtek,snd_timer,snd_pcm
+intel_rapl_perf        16384  0
+soundcore              16384  1 snd
+ipmi_msghandler        65536  2 ipmi_devintf,nvidia
+cfg80211              782336  3 rtlwifi,mac80211,r8822be
+pcspkr                 16384  0
+iTCO_vendor_support    16384  1 iTCO_wdt
+mei_me                 45056  0
+sg                     36864  0
+mei                   110592  1 mei_me
+videodev              217088  0
+wmi                    28672  3 asus_wmi,wmi_bmof,mxm_wmi
+media                  45056  1 videodev
+coretemp               16384  0
+video                  45056  1 asus_wmi
+btusb                  53248  0
+acpi_pad               24576  0
+pcc_cpufreq            16384  0
+button                 16384  0
+btrtl                  16384  1 btusb
+btbcm                  16384  1 btusb
+btintel                24576  1 btusb
+squashfs               61440  4
+bluetooth             630784  5 btrtl,btintel,btbcm,btusb
+zstd_decompress        90112  1 squashfs
+xxhash                 16384  1 zstd_decompress
+evdev                  28672  0
+jitterentropy_rng      16384  0
+drbg                   28672  1
+ansi_cprng             16384  0
+ecdh_generic           24576  1 bluetooth
+loop                   32768  8
+rfkill                 28672  4 asus_wmi,bluetooth,cfg80211
+ip_tables              28672  0
+x_tables               45056  1 ip_tables
+autofs4                49152  2
+ext4                  741376  1
+crc16                  16384  2 bluetooth,ext4
+mbcache                16384  1 ext4
+jbd2                  118784  1 ext4
+crc32c_generic         16384  0
+fscrypto               32768  1 ext4
+ecb                    16384  0
+hid_generic            16384  0
+usbhid                 57344  0
+hid                   135168  2 usbhid,hid_generic
+ehci_pci               16384  0
+uhci_hcd               49152  0
+ehci_hcd               94208  1 ehci_pci
+uas                    28672  0
+usb_storage            69632  1 uas
+sd_mod                 53248  3
+crc32c_intel           24576  2
+ahci                   40960  2
+aesni_intel           200704  0
+libahci                40960  1 ahci
+aes_x86_64             20480  1 aesni_intel
+crypto_simd            16384  1 aesni_intel
+xhci_pci               16384  0
+xhci_hcd              270336  1 xhci_pci
+cryptd                 28672  3 crypto_simd,ghash_clmulni_intel,aesni_intel
+glue_helper            16384  1 aesni_intel
+libata                278528  2 libahci,ahci
+e1000e                282624  0
+i2c_i801               28672  0
+usbcore               290816  9 xhci_hcd,ehci_pci,usbhid,usb_storage,ehci_hcd,btusb,xhci_pci,uas,uhci_hcd
+scsi_mod              253952  5 sd_mod,usb_storage,uas,libata,sg
+usb_common             16384  1 usbcore
+fan                    16384  0
+thermal                20480  0
