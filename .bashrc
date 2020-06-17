@@ -129,7 +129,7 @@ export PATH="$HOME/todo:$PATH"
 
 # Other env variables
 export DENO_INSTALL="/home/mario/.deno"
-export PAGER="most"
+#export PAGER="most"
 
 # Path env variables
 export PATH="$DENO_INSTALL/bin:$PATH"
