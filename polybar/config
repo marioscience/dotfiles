@@ -63,7 +63,7 @@ font-5 = siji:pixelsize=10;1
 modules-left = powermenu bspwm i3
 modules-center = 
 ;add GPU Temp as module here, if possible.
-modules-right = filesystem xkeyboard memory cpu temperature pulseaudio wlan date
+modules-right = filesystem xkeyboard memory cpu temperature pulseaudio wlan eth date
 
 tray-position = right
 tray-padding = 2
@@ -242,7 +242,8 @@ label-connected = %essid%
 ;format-disconnected =
 format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
-label-disconnected = %ifname% disconnected
+;label-disconnected = %ifname% disconnected
+label-disconnected = 
 label-disconnected-foreground = ${colors.alert}
 
 ramp-signal-0 = 
@@ -254,7 +255,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp0s31f6
 interval = 3.0
 
 format-connected-underline = #55aa55
@@ -305,7 +306,8 @@ bar-volume-foreground-5 = ${colors.secondary}
 ;#f5a70a
 bar-volume-foreground-6 = ${colors.alert}
 bar-volume-gradient = false
-bar-volume-indicator = ⊙
+;bar-volume-indicator = ⊙
+bar-volume-indicator = ||
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
 bar-volume-fill-font = 2

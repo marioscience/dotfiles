@@ -50,4 +50,13 @@ Description: Windows 10 stutters (including audio)
 Error log: N/A
 Solution: Possible solutions were virtual hard drive not using IO cache or low memory causing paging.See vm_stutter_troubleshoot for changes applied which seem to have solved the issue.
 ---==============================================---
-
+November 25, 2019:
+Description: DXVK overlay showing FPS and other graphics related information. Not able to remove it by unsetting DXVK_HUD environment variable or as prefix for steam. 
+Error log: N/A
+Solution: Set DXVK_HUD=0 in launch options for desired game. i.e enter 'DXVK_HUD=0 %command%' in desired game > properies > set launch options. 
+---==============================================---
+November 25, 2019:
+Description: follout 4 doesn't have NPC voice audio and other audio weirness
+Error log: N/A
+Solution: --
+---==============================================---

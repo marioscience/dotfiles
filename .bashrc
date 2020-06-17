@@ -112,6 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+### add 
+
 ### script that starts bluetooth automatically (moved to crontab)
 #pulseaudio --start
 #wait
@@ -120,4 +122,23 @@ fi
 #java settings
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
-export DXVK_HUD=full
+#export DXVK_HUD=full # turn off DXVK HUD
+
+# Custom env variables (Create heading for custom other?)
+export PATH="$HOME/todo:$PATH"
+
+# Other env variables
+export DENO_INSTALL="/home/mario/.deno"
+export PAGER="most"
+
+# Path env variables
+export PATH="$DENO_INSTALL/bin:$PATH"
+export PATH="/opt/Rodeo/rodeo:$PATH"
+export PATH="$HOME/eclipse/java-2019-12/eclipse:$PATH"
+export PATH="$HOME/built-from-source/idea-IC-201.7223.91/bin/:$PATH"
+
+#add shortcut to switch to russian keybard
+setxkbmap -option grp:alt_shift_toggle us,ru
+
+#open ranger by default in consoles
+ranger

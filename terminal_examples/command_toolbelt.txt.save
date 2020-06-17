@@ -1,6 +1,3 @@
-=== Programs ===
-alias - check aliases for programs to be started
-
 === Quick Reference ===
 cmd_reference - alias to show this help
 cd - - go back to previous directory
@@ -10,10 +7,6 @@ sudo !! - run last command as sudo
 !!:1, !!:2, !!:3 - last command arguments by index
 Ctrl+Shift+U [insert Unicode(while holding ctrl+shift)] - Add special characters ie. 00F1 for spanish ñ
 setxkbmap -option grp:alt_shift_toggle us,ru - add keyboard shortcut to switch between russia and US keyboards. what a bomb!
-nohup command --options - use this to detach process from terminal when running them with options
-ctrl-z - bring back terminal control
-bg, fg - switch to background or foreground run mode
-disown %[job number] - detach process from terminal
 
 ## This file is to keep a tab on the applications that I have installed 
 that are helpful for certain functions. 
@@ -60,8 +53,6 @@ setxkbmap -option grp:alt_shift_toggle us,ru - switch keyboard from us to russia
 place here only commands not known by heart
 -- i3 Defaults
 Mod+f - fullscreen
-bindsym $mod+Shift+space floating toggle
-
 
 -- User Custom 
 Mod+Control+Up - turn up systemwide volume.
@@ -72,6 +63,7 @@ Mod+Control+Down - turn down systemwide volume.
 TODO: Apps that might be nice to implement under /code
 - create a different user to work on projects. another for personal stuff. 
 - create a notepad command that will save everything that you type in the prompt provided. The idea is to capture user input really fast to take quick notes that can be parsed and organized. The store for the test will work as a queue holding all lines typed with a finite capacity but large notheless. Say a notepad that will hold a buffer of 1MB de texto y cualquier linea que llegue al fondo del queue it will get deleted. 
-- create dashboard to display at startup in command line. there is also a file related to this and some comments in i3 config file. 
+- create dashboard to display at startup in command line. there is also a python file () related to this and some comments in i3 config file. 
+- create app about 
 Legend: []: not done [ ]:in progress [x]: done
 ===

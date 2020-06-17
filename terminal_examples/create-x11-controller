@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo %removing xpad%
+rmmod xpad
+
+echo %waiting...%
+sleep 2m
+
+echo %starting controller%
+xboxdrv -c /home/mario/terminal_examples/xboxdrv-one-trigger-axis.config
+
+echo %done%
+

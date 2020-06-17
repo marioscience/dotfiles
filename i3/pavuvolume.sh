@@ -124,6 +124,11 @@ function volMuteStatus {
 
 }
 
+function nextSong {
+	echo 'WARNING: Not yet implemented!'
+	#wget 'http://music.google.com/nextSong' # use url to switch song in music.google.com.
+}
+
 
 case "$1" in
         --up)
@@ -144,4 +149,8 @@ case "$1" in
         --sync)
                 volSync
         ;;
+
+	--nexsong)
+		nextSong
+	;;
 esac
