@@ -1,0 +1,15 @@
+If you're using systemd:
+
+
+$ systemctl status bluetooth
+● bluetooth.service - Bluetooth service
+   Loaded: loaded (/lib/systemd/system/bluetooth.service; enabled)
+   Active: active (running) since Fri 2015-01-16 21:25:19 JST; 1 day 16h ago
+
+$ sudo systemctl start bluetooth
+
+
+use "bluetoothctl" to pair and control bluetooth.
+
+Check bluetooth status:
+systemctl status bluetooth

@@ -1,0 +1,69 @@
+=== Quick Reference ===
+cmd_reference - alias to show this help
+cd - - go back to previous directory
+$_ or !$ - last argument used
+!! - aliast for last run command
+sudo !! - run last command as sudo
+!!:1, !!:2, !!:3 - last command arguments by index
+Ctrl+Shift+U [insert Unicode(while holding ctrl+shift)] - Add special characters ie. 00F1 for spanish ñ
+setxkbmap -option grp:alt_shift_toggle us,ru - add keyboard shortcut to switch between russia and US keyboards. what a bomb!
+
+## This file is to keep a tab on the applications that I have installed 
+that are helpful for certain functions. 
+
+=== NETWORK MONITORING ===
+tcptrack - tracks tcp connections 
+slurm - monitor network bandwith information 
+nmcli - check network manager devices. use "nmcli device wifi" to see wifi info
+dmesg - check logs for kernel (wifi errors might be logged here, you can also check /var/log/syslog)
+
+=== BLUETOOTH ===
+bluetoothctl - scan, pair, connect, etc to bluetooth devices
+
+=== AUDIO ===
+pactl, pacmd - pulse audio tools to manage audio cards
+pavucontrol - visual configuratio of audio settings
+
+=== SYSTEM MONITOR ===
+gtop - monitor CPU, memory, network etc
+
+=== SYSTEM INFORMATION ===
+hostnamectl - show information about current debian version
+
+=== DISK ===
+lsblk, fdisk -l, parted -l, blkid - To see information about all disks (including unmounted)
+df -h - See available space
+du - See space information for files/directories 
+du -h --max-depth=1 Downloads/ | sort -hr - See detailed information about space in directory
+
+=== UTILITIES ===
+libreoffice - office for linux
+mupdf - package for opening pdf files
+apt-cache search name - search cache for packages to install. remember to update/upgrade apt-get.
+apt-cache show package_name - show info about package in chache (candidate for install)
+apt-cache showpkg package_name - same as above but meta 
+find /path/to/search -name filename -type -f/d - find a file or directory given a name
+snap run acestreamplayer - run acestream
+sudo openvpn us-free-02.protonvpn.com.udp.ovpn - run openvpn with US free server. if program works good, might pay for it. 
+xboxdrv -c ~/xboxdrv-one-trigger-axis.config - create xbox virtual controller with one axis for triggers
+evtest - run alone will give available gamepads, run with another input from /dev/input and it will listen for key presses
+setxkbmap -option grp:alt_shift_toggle us,ru - switch keyboard from us to russian keybard. [I AM NOT A SPY, NSA.]
+
+=== i3 COMMANDS ===
+place here only commands not known by heart
+-- i3 Defaults
+Mod+f - fullscreen
+
+-- User Custom 
+Mod+Control+Up - turn up systemwide volume.
+Mod+Control+Down - turn down systemwide volume.
+ -- Complete the list --
+
+===
+TODO: Apps that might be nice to implement under /code
+- create a different user to work on projects. another for personal stuff. 
+- create a notepad command that will save everything that you type in the prompt provided. The idea is to capture user input really fast to take quick notes that can be parsed and organized. The store for the test will work as a queue holding all lines typed with a finite capacity but large notheless. Say a notepad that will hold a buffer of 1MB de texto y cualquier linea que llegue al fondo del queue it will get deleted. 
+- create dashboard to display at startup in command line. there is also a python file () related to this and some comments in i3 config file. 
+- create app about 
+Legend: []: not done [ ]:in progress [x]: done
+===

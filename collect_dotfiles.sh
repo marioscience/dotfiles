@@ -7,6 +7,7 @@ cp -r $HOME/.config/neofetch neofetch/
 cp -r $HOME/.config/polybar polybar/
 cp -r $HOME/terminal_examples terminal_examples/
 cp -r $HOME/.config/ranger ranger/
+cp -r $HOME/.config/micro/*.json .
 cp $HOME/.bash_aliases .
 cp $HOME/.bash_logout .
 cp $HOME/.bashrc .

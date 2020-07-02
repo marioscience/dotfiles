@@ -1,0 +1,62 @@
+---==============================================---
+January 1, 2019:
+Description: Problem with steam after dist-upgrade.
+Error Log: 
+libGL: screen 0 does not appear to be DRI2 capable
+libGL: OpenDriver: trying /usr/lib/i386-linux-gnu/dri/tls/swrast_dri.so
+libGL: OpenDriver: trying /usr/lib/i386-linux-gnu/dri/swrast_dri.so
+libGL error: failed to load driver: swrast
+Solution: Uninstall Driver (~/Downloads$ ./NVIDIA-Linux-x86_64-410.66.run --uninstall) 
+Then reboot and install. Problem seems to be that bumblebee was installed at some point. I removed it using dpkg --purge bumblebee. 
+---==============================================---
+January 1, 2019:
+Description: Font sizes of dialogs (like donwload) are too big. Making the UI hard to use.
+Error log:
+-none-
+Solution: Adjusting DPI settings solves this issue. Set dpi in ~/.Xresources. Xft.dpi 96
+---==============================================---
+January 2, 2019:
+Description: Streaming with OBS gave black screen when streaming from Xcomposite and WINE based game. 
+Error log:
+didn't capture
+Solution: sudo nvidia-settings, then under OpenGL settings on the right, disable "Allow Flipping". 
+Note obs only needs this for WINE games and it breaks V-Sync. Expect screen tearing. 
+---==============================================---
+January 15, 2019:
+Description: Wifi disconnects randomly. syslog shows 'CTRL-EVENT-DISCONNECTED reason 4'.
+Error log:
+CTRL-EVENT-DISCONNECTED reason 4
+connection disconnected (reason -4)
+Solution: [needs more time to verify] reinstalling the network drivers seems to have solved the problem. There is a github page with drivers for rtl8822be. 
+---==============================================---
+January 16, 2019:
+Description: nvidia-smi not working.
+Error log:
+Failed to initialize NVML: Driver/library version mismatch
+Solution: Trying solution at https://stackoverflow.com/questions/43022843/nvidia-nvml-driver-library-version-mismatch. A text verion of the solution was saved in a file here too. 
+---==============================================---
+January 24, 2019:
+Description: Finding ControlPanel and java installed directory.
+Error log: N/A
+Solution: ControlPanel is found under /usr/jre1.8.0_191/bin
+---==============================================---
+January 25, 2019:
+Description: Network not connecting in virtualbox. Troubleshooting says cable is disconnected.
+Error log: Windows is still setting up the class configuration for this device. (Code 56) [Found by double clicking adapter in device manager]
+Solution: Uninstalling CheckPoint VPN. 
+---==============================================---
+January 25, 2019:
+Description: Windows 10 stutters (including audio)
+Error log: N/A
+Solution: Possible solutions were virtual hard drive not using IO cache or low memory causing paging.See vm_stutter_troubleshoot for changes applied which seem to have solved the issue.
+---==============================================---
+November 25, 2019:
+Description: DXVK overlay showing FPS and other graphics related information. Not able to remove it by unsetting DXVK_HUD environment variable or as prefix for steam. 
+Error log: N/A
+Solution: Set DXVK_HUD=0 in launch options for desired game. i.e enter 'DXVK_HUD=0 %command%' in desired game > properies > set launch options. 
+---==============================================---
+November 25, 2019:
+Description: follout 4 doesn't have NPC voice audio and other audio weirness
+Error log: N/A
+Solution: --
+---==============================================---

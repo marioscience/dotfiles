@@ -1,0 +1,28 @@
+When headphones are connected with bluetooth there's a (virtual?) card 
+added in pulse audio. 
+
+use 'pulseaudio --start' to start pulse audio demon
+use bluetoothctl tool to start bluetooth and connect. In the prompt 
+there is a 'help' command use it to be able to power on bluetooth, start 
+an agent, scan devices, pair and connect. 
+
+There is a script in /etc/X11/Xsession.d (should be called 100autoconnect-bluetooth-headphones)
+that gets run every time an x session is started (startx is run). This script
+connects the headphones right away. (In the future we could get the alias working, but
+it is using the MAC of the headhpones (Sennheiser 4.50btnc))
+
+use command pulseaudio -v, -k, --start to get log, kill and start 
+audiopulse daemon. Audiopulse is added between the hardware and the 
+audio, but it's not really a driver but used for multiplexing mainly.
+
+
+use blueman-applet to bring up a nice window (and little icon in the
+bar) to chane bluetooth and audio settings
+
+use pactl to control pulse audio using commands
+
+# lists a list of audio cards in the system
+pactl list cards <short>
+
+# set a profile using the id and the name of the profile
+pactl set-card-profile 1 a2dp

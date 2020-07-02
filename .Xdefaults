@@ -1,23 +1,24 @@
 URxvt.transparent:      true
-URxvt.shading:          25
+URxvt.shading:          20
 URxvt.cursorBlink:      1
 URxvt.termName:         rxvt-256color
-URxvt.font:		xft:Terminal:pixelsize=11,style=Regular
-URxvt.boldFont:		xft:Terminal:pixelsize=11,style=Bold
-URxvt.italicFont:	xft:Terminal:pixelsize=11,style=bold
-URxvt.boldItalicFont:	xft:Terminal:pixelsize=11,style=bold
-!URxvt.boldItalicFont:	xft:Terminal:pixelsize=11,style=bold
+URxvt.font:		xft:Terminal:pixelsize=10,style=Regular
+URxvt.boldFont:		xft:Terminal:pixelsize=10,style=Bold
+URxvt.italicFont:	xft:Terminal:pixelsize=10,style=bold
+URxvt.boldItalicFont:	xft:monaco:pixelsize=10,style=bold
+!URxvt.boldItalicFont:	xft:monaco:pixelsize=10,style=bold
 URxvt.reverseVideo:     True
 URxvt.letterSpace:      -1
 URxvt.perl-ext-common:  default,matcher
-URxvt.urlLauncher:      google-chrome
-URxvt.matcher.button:   3
+!URxvt.urlLauncher:      google-chrome
+URxvt.urlLauncher:      /usr/bin/xdg-open
+URxvt.matcher.button:   1
+URxvt.matcher.rend.0:   Uline Bold fg5
 URxvt.visualBell:       true
 URxvt.scrollBar:        false
 URxvt.saveLines:        4095
 
-URxvt.foreground: #3a3a3a
-URxvt.background: #bababa
+
 ! --- ~/.Xresources ------------------------------------------------------------
 ! ------------------------------------------------------------------------------
 ! --- generated with 4bit Terminal Color Scheme Designer -----------------------
@@ -27,8 +28,8 @@ URxvt.background: #bababa
 
 ! --- special colors ---
 
-*background: #3a3a3a
-*foreground: #bababa
+*background: #FDFDFD
+*foreground: #121212
 
 ! --- standard colors ---
 
@@ -84,3 +85,6 @@ URxvt.background: #bababa
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
+
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.witdh: 1

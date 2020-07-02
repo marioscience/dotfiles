@@ -129,16 +129,38 @@ export PATH="$HOME/todo:$PATH"
 
 # Other env variables
 export DENO_INSTALL="/home/mario/.deno"
+export SPARK_HOME="/opt/spark-3.0.0-bin-hadoop2.7"
+export MICRO_TRUECOLOR=1
+
 #export PAGER="most"
 
 # Path env variables
 export PATH="$DENO_INSTALL/bin:$PATH"
-export PATH="/opt/Rodeo/rodeo:$PATH"
+export PATH="/opt/Rodeo/:$PATH"
 export PATH="$HOME/eclipse/java-2019-12/eclipse:$PATH"
 export PATH="$HOME/built-from-source/idea-IC-201.7223.91/bin/:$PATH"
+export PATH="/opt/hadoop-2.7.7/bin:$PATH"
+export PATH="/opt/spark-3.0.0-bin-hadoop2.7/bin:$PATH"
+#export PATH="$HOME/anaconda3/bin:$PATH"
 
 #add shortcut to switch to russian keybard
 setxkbmap -option grp:alt_shift_toggle us,ru
 
 #open ranger by default in consoles
 ranger
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/mario/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mario/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mario/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mario/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

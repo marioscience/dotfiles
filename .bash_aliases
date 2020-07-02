@@ -10,7 +10,6 @@ alias steam='steam & disown && exit'
 alias qbittorrent='qbittorrent & disown && exit'
 alias obs='obs & disown && exit'
 alias acestream='acestream & disown && exit'
-#alias rodeo='rodeo & disown && exit'
 alias zoom='zoom & disown && exit'
 alias libreoffice='libreoffice & disown && exit'
 #alias fms-manager='cd '~/.wine/drive_c/' && wine NGFMSManager.exe' #~/.wine/drive_c/Program Files (x86)/Navigraph/FMS Data Manager
@@ -22,6 +21,8 @@ alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir
 alias rstudio='rstudio & disown && exit'
 alias weka='cd ~/built-from-source/weka-3-8-4 && ./weka.sh & disown && exit'
 alias intellij='idea.sh & disown && exit'
+# ALTERNATIVE to closing terminal after opening progam -- rodeo was uninstalled -- alias rodeo='nohup sudo rodeo && disown & exit'
+alias spyder='spyder & disown && exit'
 
 # system and settings
 alias add_startup_command='nano .xinitrc'
