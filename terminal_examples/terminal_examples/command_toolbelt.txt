@@ -1,6 +1,12 @@
 === Programs ===
 alias - check aliases for programs to be started
-
+apt-cache search name - search cache for packages to install. remember to update/upgrade apt-get.
+apt-cache show package_name - show info about package in chache (candidate for install)
+apt-cache showpkg package_name - same as above but meta 
+snap run acestreamplayer - run acestream
+*apt list --installed*, *dpkg-query -l*, *snap list * - list programs installed in apt, dpkg, snap
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 37B90EDD4E3EFAE4
+ ^^^ if having problems where you get a NO_PUBKEY when trying apt-get update then fetch the key with the command above
 === Quick Reference ===
 cmd_reference - alias to show this help
 cd - - go back to previous directory
@@ -11,9 +17,12 @@ sudo !! - run last command as sudo
 Ctrl+Shift+U [insert Unicode(while holding ctrl+shift)] - Add special characters ie. 00F1 for spanish ñ
 setxkbmap -option grp:alt_shift_toggle us,ru - add keyboard shortcut to switch between russia and US keyboards. what a bomb!
 nohup command --options - use this to detach process from terminal when running them with options
+nohup without creating output - nohup mupdf lecture02-Stack-Q-Vector-List-Seq.pdf > /dev/null 2>&1 & 
 ctrl-z - bring back terminal control
 bg, fg - switch to background or foreground run mode
 disown %[job number] - detach process from terminal
+timedatectl - tool for managing time and date settings
+systemctl <command> [service-name] - manage system services
 
 === Performance Monitoring ===
 top then press 1 - to see per core load
@@ -52,11 +61,7 @@ du -h --max-depth=1 Downloads/ | sort -hr - See detailed information about space
 === UTILITIES ===
 libreoffice - office for linux
 mupdf - package for opening pdf files
-apt-cache search name - search cache for packages to install. remember to update/upgrade apt-get.
-apt-cache show package_name - show info about package in chache (candidate for install)
-apt-cache showpkg package_name - same as above but meta 
 find /path/to/search -name filename -type -f/d - find a file or directory given a name
-snap run acestreamplayer - run acestream
 sudo openvpn us-free-02.protonvpn.com.udp.ovpn - run openvpn with US free server. if program works good, might pay for it. 
 xboxdrv -c ~/xboxdrv-one-trigger-axis.config - create xbox virtual controller with one axis for triggers
 evtest - run alone will give available gamepads, run with another input from /dev/input and it will listen for key presses

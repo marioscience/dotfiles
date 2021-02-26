@@ -223,6 +223,9 @@ exec_always "x-terminal-emulator && ranger"
 for_window [class="^.*"] border pixel 1
 client.focused #333 #333 #333 #333 #333
 
+# stop following mouse to focus windows
+focus_follows_mouse no
+
 popup_during_fullscreen smart
 
 #### i3-gaps configurations
@@ -241,8 +244,11 @@ bindsym $mod+Control+s exec "cd ~/.config/i3/ && ./streaming.sh --start"
 bindsym $mod+Control+d exec "cd ~/.config/i3/ && ./streaming.sh --stop"
 bindsym $mod+c exec "cd ~/.config/i3/ && ./screenshot.sh --selectscreen"
 bindsym $mod+Shift+v exec "cd ~/.config/i3/ && ./screenshot.sh --entirescreen"
+bindsym $mod+Control+c exec "cd ~/.config/i3/ && ./connect_headphones.sh"
+bindsym $mod+Control+j exec "cd ~/.config/i3/ && ./connect_xp11_joystick.sh"
 # Multi-screen screenshots with scrot -- from the internet, not tested yet
 #bindsym --release Print exec scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # All screens
 
 
-# Trying toggle scratch window
+# Trying to have a small calendar popup
+for_window [class="Yad" title="yad-calendar"] floating enable

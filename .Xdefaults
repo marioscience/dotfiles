@@ -2,11 +2,10 @@ URxvt.transparent:      true
 URxvt.shading:          20
 URxvt.cursorBlink:      1
 URxvt.termName:         rxvt-256color
-URxvt.font:		xft:Terminal:pixelsize=10,style=Regular
-URxvt.boldFont:		xft:Terminal:pixelsize=10,style=Bold
-URxvt.italicFont:	xft:Terminal:pixelsize=10,style=bold
-URxvt.boldItalicFont:	xft:monaco:pixelsize=10,style=bold
-!URxvt.boldItalicFont:	xft:monaco:pixelsize=10,style=bold
+URxvt.font:		xft:Monaco for Powerline:pixelsize=12,style=Regular
+URxvt.boldFont:		xft:Monaco for Powerline:pixelsize=12,style=Bold
+URxvt.italicFont:	xft:Monaco for Powerline:pixelsize=12,style=bold
+URxvt.boldItalicFont:	xft:Monaco for Powerline:pixelsize=12,style=bold
 URxvt.reverseVideo:     True
 URxvt.letterSpace:      -1
 URxvt.perl-ext-common:  default,matcher
@@ -86,5 +85,5 @@ URxvt.saveLines:        4095
 ! --- end of terminal colors section -------------------------------------------
 ! ------------------------------------------------------------------------------
 
-XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollBar: false
 XTerm.vt100.scrollbar.witdh: 1

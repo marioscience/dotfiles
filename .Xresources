@@ -16,11 +16,11 @@ xterm*scrollBar: false
 
 xterm*charClass: 33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48
 
-URxvt.font:                 xft:Monaco for Powerline:regular:size=9
-URxvt.imFont:               xft:Monaco for Powerline:regular:size=9
-URxvt.boldFont:             xft:Monaco for Powerline:bold:size=9
-URxvt.italicFont:           xft:Monaco for Powerline:italic:size=9
-URxvt.boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=9
+URxvt.font:                 xft:Monaco for Powerline:regular:size=9, xft:Inconsolata\ for\ Powerline:pixelsize=9
+URxvt.imFont:               xft:Monaco for Powerline:regular:size=9, xft:Inconsolata\ for\ Powerline:pixelsize=9
+URxvt.boldFont:             xft:Monaco for Powerline:bold:size=9, xft:Inconsolata\ for\ Powerline:pixelsize=9
+URxvt.italicFont:           xft:Monaco for Powerline:italic:size=9, xft:Inconsolata\ for\ Powerline:pixelsize=9
+URxvt.boldItalicFont:       xft:Monaco for Powerline:bold:italic:size=9, xft:Inconsolata\ for\ Powerline:pixelsize=9
 
 URxvt.letterSpace:      -1
 

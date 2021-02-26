@@ -57,7 +57,18 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[1;30m\]~\A[\u]~\n\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\w > \[\033[00m\]"
+    # PS1='$(
+    # 1red 2green 3brown 4blue 5purple 6cyan 7green
+    # c1=2 # color of \u and \h
+    # c2=3 # color of \w
+    # pr="${debian_chroot:+($debian_chroot)}\[\033[01;3$c1 m\]\u\[\033[01;34m\]@\[\033[00;3$c1 m\]\h\[\033[01;34m\]:\[\033[00;3$c2 m\]\w"
+    # if [ $(($(($(tput cols)-$(pwd|sed -e "s/\/home\/.*\/?/~/g"|wc -c))) < 40 )) == 1 ]; then
+        # echo "\r\[\033[01;34m\]┌["$pr"\[\033[01;34m\]]\n\[\033[01;34m\]└>\[\033[00m "
+    # else echo "\r "$pr"\[\033[01;34m\]>\[\033[00m "
+    # fi
+    # )'
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -142,9 +153,11 @@ export PATH="$HOME/built-from-source/idea-IC-201.7223.91/bin/:$PATH"
 export PATH="/opt/hadoop-2.7.7/bin:$PATH"
 export PATH="/opt/spark-3.0.0-bin-hadoop2.7/bin:$PATH"
 #export PATH="$HOME/anaconda3/bin:$PATH"
+export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/usr/bin/jd2"
 
 #add shortcut to switch to russian keybard
-setxkbmap -option grp:alt_shift_toggle us,ru
+#setxkbmap -option grp:alt_shift_toggle us,ru
 
 #open ranger by default in consoles
 ranger
@@ -164,3 +177,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[ -f ~/.config/tabtab/__tabtab.bash ] && . ~/.config/tabtab/__tabtab.bash || true
