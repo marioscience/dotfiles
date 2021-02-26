@@ -18,7 +18,5 @@ cp $HOME/.profile .
 cp $HOME/.Xdefaults .
 cp $HOME/.xinitrc .
 cp $HOME/.Xresources .
-
-
-
-
+cp $HOME/.zsh_aliases .
+cp $HOME/.zshrc .
